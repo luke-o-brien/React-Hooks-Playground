@@ -1,0 +1,19 @@
+.Navcontainer {
+  background-color: rgb(246, 246, 246);
+  width: 100%;
+  height: auto;
+}
+
+.LinkContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  gap:20px
+}
+
+.Link {
+  text-decoration: none;
+  color: green;
+  font-size: 22px;
+}
