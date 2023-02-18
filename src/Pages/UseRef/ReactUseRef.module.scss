@@ -1,0 +1,20 @@
+.miniMenu {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5vw;
+}
+
+.miniMenuButton {
+  background-color: rgb(232, 232, 232);
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 10px;
+  width: 7vw;
+  cursor: pointer;
+}
+
+.miniMenuButton:hover {
+  background-color: rgb(202, 201, 201);
+}

@@ -3,28 +3,23 @@ import { useRef, useState } from "react"
 
 function UserefBasics() {
 
-  const [visible, setvisible] = useState(false)
-
   const togglebutton = useRef()
-  const list = useRef()
+  const inputs = useRef()
 
-  function onClickToggle() {
-    setvisible(!visible)
-    console.log(togglebutton.current)
-    console.log(list.current)
+  function onSubmit() {
+  inputs.current.value ? console.log("submitted") : inputs.current.focus()
   }
   return (
     <>
     <div>
-      <h3>Basics of useRef</h3>
+      <h3>Focus and DOM manipulation</h3>
     </div>
     <div>
-      <button ref={togglebutton} onClick={onClickToggle}>Toggle Button</button>
-      { visible ? <div ref={list}>
-        <p>Item 1</p>
-        <p>Item 2</p>
-        <p>Item 3</p>
-      </div> : null }
+      <form style={{"display": "flex" , "flexDirection" : "column", "width": "50vw", "margin": "auto", "gap": "20px", marginBottom: "20px"}}>
+        <input ref={inputs} type="text"></input>
+        <input ref={inputs} type="text"></input>
+      </form>
+      <button ref={togglebutton} onClick={onSubmit}>Submit</button>
     </div>
 
     </>
